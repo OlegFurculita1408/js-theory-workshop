@@ -720,17 +720,101 @@
 //  чтобы она считала сумму только тех аргументов, которые больше чем заданное число.
 //  Это число должно быть первым параметром функции.
 
-function addOverNum(number, ...args) {
-  let total = 0;
+// function addOverNum(number, ...args) {
+//   let total = 0;
 
-  for (const arg of args) {
-    if (arg > number) {
-    total += arg;
-    }
-  }
-  return total;
-}
-addOverNum(50, 15, 27);
-addOverNum(10, 12, 4, 11, 48, 10, 8);
-addOverNum(15, 32, 6, 13, 19, 8);
-addOverNum(20, 74, 11, 62, 46, 12, 36);
+//   for (const arg of args) {
+//     if (arg > number) {
+//     total += arg;
+//     }
+//   }
+//   return total;
+// }
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+// addOverNum(15, 32, 6, 13, 19, 8);
+// addOverNum(20, 74, 11, 62, 46, 12, 36);
+
+
+
+// Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве books.
+//  Используй indexOf() для того, чтобы найти нужный элемент массива,
+//  и splice() для того чтобы заменить этот элемент
+
+// const bookShelf = {
+//     books: ["The last kingdom", "Haze", "The guardian of dreams"],
+//     updateBook(oldName, newName) {
+//             let bookIndex = this.books.indexOf(oldName);
+//                 this.books.splice(bookIndex, 1, newName);
+//     },
+//   };
+//   console.log(bookShelf.updateBook("Haze", "Dungeon chronicles"));
+//   console.log(bookShelf.updateBook("The last kingdom", "Dune"));
+
+
+
+// Дополни метод removePotion(potionName) так, чтобы он удалял зелье potionName
+//  из массива зелий в свойстве potions.
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//     removePotion(potionName) {
+//       this.potions = this.potions.filter(v => v !== potionName);
+//       console.log(this.potions);
+//     },
+//   };
+//     atTheOldToad.removePotion("Dragon breath");
+//     atTheOldToad.removePotion("Speed potion");
+
+
+
+
+// Заказчица хочет чтобы каждое зелье было представлено не только именем, но и ценой, а в будущем может быть и другими характеристиками.
+//  Поэтому теперь в свойстве potions будет храниться массив объектов со следующими свойствами.
+// {
+//   name: "Dragon breath",
+//   price: 700
+// }
+// Выполни рефакторинг методов объекта atTheOldToad так, чтобы они работали не с массивом строк, а с массивом объектов.
+
+
+// const atTheOldToad = {
+//     potions: [
+//       { name: "Speed potion", price: 460 },
+//       { name: "Dragon breath", price: 780 },
+//       { name: "Stone skin", price: 520 },
+//     ],
+//     getPotions() {
+//         console.log(this.potions);
+//     },
+//     addPotion(newPotion) {
+//         for (let potion of this.potions) {
+//             if (potion.name === newPotion.name) {
+//                 console.log(`Error! Potion ${newPotion.name} is already in your inventory!`);
+//                 };
+//             };
+//         console.log(this.potions.push(newPotion));
+//     },
+//     removePotion(potionName) {
+//         for (let potion of this.potions) {
+//             if (potion === potionName) {
+//                 console.log(this.potions.splice(this.potions.indexOf(potion), 1));
+//                 };
+//             };
+//         console.log(`Potion ${potionName} is not in inventory!`);
+//     },
+//     updatePotionName(oldName, newName) {
+//         for (let potion of this.potions) {
+//             if (potion.name === oldName) {
+//                 console.log(potion.name = newName);
+//                 };
+//             };
+//         console.log(`Potion ${oldName} is not in inventory!`);
+//     },
+//   };
+//   atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+//   atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
+//   atTheOldToad.removePotion({ name: 'Remuve potion', price: 500 });
+//   atTheOldToad.removePotion('Dragon breath');
+//   atTheOldToad.updatePotionName({ name: 'Update potion', price: 1000 });
+
