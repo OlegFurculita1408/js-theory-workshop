@@ -925,3 +925,5 @@
 // };
 // console.log(getTotalBalanceByGender(users, 'female'));
 // console.log(getTotalBalanceByGender(users, 'male'));
+
+
