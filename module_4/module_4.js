@@ -520,7 +520,7 @@
 //     },
 //   ];
 //   const getUsersWithEyeColor = (users, color) => {
-//     let newUsers = users.filter(user => user.eyeColor === color)
+//     let newUsers = users.(user => user.eyeColor === color)
 //     console.log(newUsers);
 //    };
 //    getUsersWithEyeColor(users,'green');
